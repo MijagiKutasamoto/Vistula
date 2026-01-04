@@ -1,188 +1,304 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VistulaOS – Debian dla graczy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VistulaOS – Nowoczesny system na Arch Linux</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <header class="hero" id="top">
     <div class="navbar">
-      <div class="logo">VistulaOS</div>
-      <nav>
+      <a class="logo" href="#top" aria-label="VistulaOS">VistulaOS</a>
+
+      <nav class="nav">
+        <a href="#about">O systemie</a>
         <a href="#features">Funkcje</a>
-        <a href="#performance">Wydajność</a>
+        <a href="#philosophy">Filozofia</a>
         <a href="#download">Pobierz</a>
         <a href="#community">Społeczność</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <button class="ghost" id="theme-toggle" aria-label="Przełącz motyw">🌙</button>
+
+      <div class="nav-actions">
+        <button class="ghost" id="theme-toggle" aria-label="Przełącz motyw">🌙</button>
+        <a class="btn small" href="#download">Pobierz</a>
+      </div>
     </div>
+
     <div class="hero-content">
       <div class="hero-text">
-        <p class="eyebrow">Nowa generacja Linuksa dla graczy</p>
-        <h1>VistulaOS – Debian stworzony do grania</h1>
-        <p class="lede">Szybki, stabilny i gotowy do boju. VistulaOS łączy solidne fundamenty Debiana z gamingowymi usprawnieniami: jądro z łatkami low-latency, optymalizacje GPU i prekonfigurowane narzędzia Steam/Proton.</p>
+        <p class="eyebrow">Arch Linux • prostota • kontrola</p>
+        <h1>VistulaOS — lekki, nowoczesny system oparty o Arch</h1>
+        <p class="lede">
+          VistulaOS to dopracowana dystrybucja oparta wyłącznie o Arch Linux — z naciskiem na spójny wygląd,
+          szybkie uruchamianie, rozsądne domyślne ustawienia oraz prostą obsługę. Bez zbędnego balastu.
+        </p>
+
         <div class="cta-row">
           <a class="btn primary" href="#download">Pobierz ISO</a>
           <a class="btn" href="#features">Zobacz funkcje</a>
         </div>
+
         <div class="meta">
-          <span>⚡ Kernel low-latency</span>
-          <span>🎮 Proton, Steam, Lutris</span>
-          <span>🛡️ Secure Boot ready</span>
+          <span>⚡ Szybki start i responsywność</span>
+          <span>🧩 Spójne domyślne aplikacje</span>
+          <span>🔧 Narzędzia do konfiguracji</span>
         </div>
       </div>
-      <div class="hero-card" aria-label="Podgląd systemu VistulaOS">
+
+      <div class="hero-card" aria-label="Podgląd wydania VistulaOS">
         <div class="card-header">
-          <div class="pill">VistulaOS Horizon 1.0</div>
-          <div class="status">Stabilne wydanie</div>
+          <div class="pill">VistulaOS Horizon</div>
+          <div class="status">Wydanie stabilne</div>
         </div>
+
         <div class="card-body">
           <div class="stat">
-            <span class="label">Średni FPS w grach</span>
-            <span class="value">+12%</span>
-            <span class="hint">vs. czysty Debian 12</span>
+            <span class="label">Baza</span>
+            <span class="value">Arch Linux</span>
+            <span class="hint">rolling release</span>
           </div>
           <div class="stat">
-            <span class="label">Czas startu</span>
-            <span class="value">18s</span>
-            <span class="hint">z włączonym Fast Boot</span>
+            <span class="label">Środowisko</span>
+            <span class="value">Cinnamon</span>
+            <span class="hint">spójny motyw Vistula</span>
           </div>
           <div class="stat">
-            <span class="label">Obsługiwane GPU</span>
-            <span class="value">NVIDIA / AMD / Intel</span>
-            <span class="hint">z automatyczną konfiguracją</span>
+            <span class="label">Instalacja</span>
+            <span class="value">Prosta</span>
+            <span class="hint">bez zbędnych pytań</span>
           </div>
         </div>
+
         <div class="card-footer">
-          Gotowe do gry w 10 minut – zainstaluj, zaloguj się do Steam i graj.
+          Szybki start, czyste domyślne ustawienia i wygodna konfiguracja po instalacji.
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="features" class="section features">
-      <div class="section-head">
-        <p class="eyebrow">Co dostajesz?</p>
-        <h2>Gamingowe usprawnienia od startu</h2>
-        <p class="lede">Nie trać czasu na ręczne konfiguracje. VistulaOS dostarcza najlepsze narzędzia dla graczy i twórców, gotowe tuż po instalacji.</p>
-      </div>
-      <div class="grid three">
-        <article class="card">
-          <div class="icon">🎮</div>
-          <h3>Steam + Proton</h3>
-          <p>Preinstalowany klient Steam wraz z Proton GE, Lutris oraz Heroic Launcher. Integracja z kontrolerami i nakładką FPS.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🚀</div>
-          <h3>Kernel low-latency</h3>
-          <p>Jądro zoptymalizowane pod gry i multimedia: szybsza reakcja na wejście, stabilne frametime'y, profil zasilania „Performance”.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🖥️</div>
-          <h3>Wideo i sterowniki</h3>
-          <p>Automatyczna konfiguracja sterowników NVIDIA, AMD i Intel z repozytoriów non-free-firmware. VRR, OBS, Wayland i X11.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🔒</div>
-          <h3>Bezpieczeństwo</h3>
-          <p>Secure Boot, LUKS i aktualizacje OTA przez APT. Hardened sysctl oraz firewall przygotowany do grania online.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🎨</div>
-          <h3>UI dla graczy</h3>
-          <p>Przyciemniony motyw, dynamiczne tapety i panel sterowania FPS/latency. Wszystko w lekkim środowisku KDE.</p>
-        </article>
-        <article class="card">
-          <div class="icon">🛠️</div>
-          <h3>Narzędzia twórcy</h3>
-          <p>OBS Studio, Kdenlive, GStreamer i Wine w stabilnych wersjach. Profilowane pod nagrywanie i streamowanie.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="performance" class="section split">
+    <!-- ABOUT -->
+    <section id="about" class="section split">
       <div>
-        <p class="eyebrow">Wydajność</p>
-        <h2>Stabilne FPS i niskie opóźnienia</h2>
-        <p class="lede">Testowaliśmy VistulaOS na popularnych konfiguracjach sprzętowych, aby wycisnąć maksimum z Debiana bez utraty stabilności.</p>
+        <p class="eyebrow">O systemie</p>
+        <h2>Arch, ale gotowy do użycia od razu</h2>
+        <p class="lede">
+          VistulaOS łączy elastyczność Archa z gotowym, spójnym środowiskiem i rozsądnymi ustawieniami domyślnymi.
+          Jeśli cenisz kontrolę, ale chcesz oszczędzić czas — to jest kierunek.
+        </p>
+
         <ul class="list">
-          <li><strong>GameMode + GPU Perf</strong> – automatyczne przełączanie profilu CPU/GPU podczas gry.</li>
-          <li><strong>PipeWire + WirePlumber</strong> – dźwięk z niską latencją, zoptymalizowany pod komunikację w grach.</li>
-          <li><strong>Preload shaderów</strong> – włączone w sterownikach, by uniknąć mikroprzycięć.</li>
-          <li><strong>Nowy stack Mesa</strong> – aktualne drivery AMD/Intel, gotowe pod najnowsze tytuły.</li>
+          <li><strong>Minimalizm</strong> — tylko sensowne komponenty i domyślne aplikacje.</li>
+          <li><strong>Spójny wygląd</strong> — jednolity motyw, ikony i typografia.</li>
+          <li><strong>Wygoda</strong> — proste narzędzia do aktualizacji i konfiguracji.</li>
+          <li><strong>Transparentność</strong> — projekt rozwijany publicznie (repozytoria + changelog).</li>
         </ul>
+
         <div class="pill-row">
-          <span class="pill">Wayland + X11</span>
-          <span class="pill">FSR 2 / DLSS / XeSS</span>
-          <span class="pill">Vulkan 1.3</span>
+          <span class="pill">Rolling release</span>
+          <span class="pill">Cinnamon</span>
+          <span class="pill">Pacman</span>
+          <span class="pill">Flatpak (opcjonalnie)</span>
         </div>
       </div>
+
       <div class="panel">
-        <h3>Profil „Performance”</h3>
-        <p>Włącz w panelu Vistula Control Center i graj z maksymalną mocą. System zastosuje:</p>
+        <h3>Vistula Control Center</h3>
+        <p>
+          Jedno miejsce do podstawowych ustawień: aktualizacje, sterowniki, usługi, integracje i szybkie przełączniki.
+          (Sekcja gotowa pod Twoje narzędzie w Python/GTK4.)
+        </p>
+
         <ol>
-          <li>Governor CPU: performance</li>
-          <li>NVidia/AMD: tryb maks. wydajności</li>
-          <li>Wyłączenie zbędnych usług tła</li>
-          <li>Podbicie priorytetu dla gry</li>
+          <li>Aktualizacja systemu</li>
+          <li>Zarządzanie źródłami i repo</li>
+          <li>Przełączniki wydajności / baterii</li>
+          <li>Centrum informacji o systemie</li>
         </ol>
-        <div class="badge">Zoptymalizowane pod e-sport</div>
+
+        <div class="badge">Proste, ale kontrolowalne</div>
       </div>
     </section>
 
+    <!-- FEATURES -->
+    <section id="features" class="section features">
+      <div class="section-head">
+        <p class="eyebrow">Funkcje</p>
+        <h2>Spójny system, który nie przeszkadza</h2>
+        <p class="lede">
+          Zamiast przeładowania opcjami — stabilny zestaw funkcji, które realnie ułatwiają życie.
+          Resztę dobierasz sam.
+        </p>
+      </div>
+
+      <div class="grid three">
+        <article class="card">
+          <div class="icon">🧭</div>
+          <h3>Nowoczesny pulpit</h3>
+          <p>Spójny panel, menu, powiadomienia i ustawienia. Nastawione na czytelność i szybkość.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎛️</div>
+          <h3>Narzędzia Vistula</h3>
+          <p>Panel do konfiguracji i aktualizacji. Gotowy punkt startu pod Twoje moduły i integracje.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h3>Rozsądne domyślne aplikacje</h3>
+          <p>Minimalny, praktyczny zestaw. Bez śmieci i bez dublowania programów “na wszelki wypadek”.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧱</div>
+          <h3>Stabilna baza</h3>
+          <p>Arch Linux + pacman. Proste zasady, szybkie aktualizacje i pełna kontrola nad pakietami.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧼</div>
+          <h3>Czyste ustawienia</h3>
+          <p>Domyślne profile, które nie gryzą się ze sobą. Łatwy reset i przewidywalne zachowanie systemu.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🔐</div>
+          <h3>Bezpieczeństwo i prywatność</h3>
+          <p>Domyślne podstawy: firewall, aktualizacje, sensowne uprawnienia. Bez telemetrycznych niespodzianek.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section id="philosophy" class="section split">
+      <div>
+        <p class="eyebrow">Filozofia</p>
+        <h2>Prosto. Spójnie. Z kontrolą.</h2>
+        <p class="lede">
+          VistulaOS ma wyglądać dobrze i działać przewidywalnie. Bez agresywnego “brandowania” i bez chaosu w ustawieniach.
+          System ma być narzędziem, a nie przeszkodą.
+        </p>
+
+        <ul class="list">
+          <li><strong>Design system</strong> — jeden styl, jedna logika UI.</li>
+          <li><strong>Modułowość</strong> — dodajesz funkcje wtedy, kiedy ich potrzebujesz.</li>
+          <li><strong>Przewidywalność</strong> — brak “magii” w tle bez kontroli użytkownika.</li>
+          <li><strong>Otwartość</strong> — repo, issues, changelog i roadmap.</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h3>Roadmapa (skrót)</h3>
+        <ul class="list">
+          <li>Instalator + automatyczna konfiguracja bazowa</li>
+          <li>Centrum aktualizacji + noty zmian</li>
+          <li>Pakiet motywów i ikon Vistula</li>
+          <li>Własne narzędzia (GTK4) — modułowo</li>
+        </ul>
+        <div class="badge green">Open Source</div>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD -->
     <section id="download" class="section cta">
       <div class="section-head">
         <p class="eyebrow">Pobierz</p>
-        <h2>Gotowy? Zainstaluj VistulaOS</h2>
-        <p class="lede">Obraz ISO 64-bit | Debian 12 | środowisko KDE Plasma</p>
+        <h2>Pobierz VistulaOS</h2>
+        <p class="lede">Obraz ISO 64-bit | Arch Linux | Cinnamon</p>
       </div>
+
       <div class="download-grid">
         <div class="download-card">
           <div class="tag">Stabilna</div>
-          <h3>VistulaOS Horizon 1.0</h3>
-          <p>Rekomendowane wydanie dla większości graczy. Aktualizacje bezpieczeństwa i sterowników.</p>
-          <div class="meta">ISO • 2.4 GB</div>
-          <button class="btn primary" type="button">Pobierz ISO</button>
-          <a class="link" href="#">Lista zmian</a>
+          <h3>VistulaOS Horizon</h3>
+          <p>Rekomendowana wersja do codziennego użycia. Spójne ustawienia i rozsądne domyślne pakiety.</p>
+          <div class="meta">ISO • (uzupełnij rozmiar)</div>
+          <button class="btn primary" type="button" data-action="download-stable">Pobierz ISO</button>
+          <a class="link" href="#" data-action="changelog-stable">Lista zmian</a>
         </div>
+
         <div class="download-card">
-          <div class="tag beta">Beta</div>
-          <h3>VistulaOS Aurora (beta)</h3>
-          <p>Najnowsze jądro, Mesa i Proton GE. Idealne do testowania najświeższych aktualizacji.</p>
-          <div class="meta">ISO • 2.6 GB</div>
-          <button class="btn outline" type="button">Dołącz do testów</button>
-          <a class="link" href="#">Zgłoś błąd</a>
+          <div class="tag beta">Preview</div>
+          <h3>VistulaOS Aurora</h3>
+          <p>Wersja testowa dla chętnych. Szybsze zmiany, nowe funkcje i wcześniejsze poprawki.</p>
+          <div class="meta">ISO • (uzupełnij rozmiar)</div>
+          <button class="btn outline" type="button" data-action="join-testing">Dołącz</button>
+          <a class="link" href="#" data-action="report-issue">Zgłoś problem</a>
         </div>
+      </div>
+
+      <div class="note">
+        <p><strong>Wskazówka:</strong> podlinkuj tu sumy kontrolne SHA256 i krótką instrukcję “Jak sprawdzić ISO”.</p>
       </div>
     </section>
 
+    <!-- COMMUNITY -->
     <section id="community" class="section community">
       <div>
         <p class="eyebrow">Społeczność</p>
-        <h2>Dołącz do graczy VistulaOS</h2>
-        <p class="lede">Serwer Discord, forum i otwarte repozytoria – budujemy najlepszą dystrybucję dla graczy razem z Tobą.</p>
+        <h2>Budujemy VistulaOS razem</h2>
+        <p class="lede">
+          Repozytoria, zgłoszenia i dyskusje — wszystko publicznie. Jeśli chcesz pomóc: testy, grafika, dokumentacja,
+          paczki i narzędzia.
+        </p>
+
         <div class="pill-row">
-          <span class="pill">Discord</span>
-          <span class="pill">Forum</span>
-          <span class="pill">Git</span>
-          <span class="pill">ProtonDB</span>
+          <a class="pill" href="#" aria-label="Discord">Discord</a>
+          <a class="pill" href="#" aria-label="GitHub">GitHub</a>
+          <a class="pill" href="#" aria-label="Forum">Forum</a>
+          <a class="pill" href="#" aria-label="Dokumentacja">Docs</a>
         </div>
       </div>
+
       <div class="panel">
-        <h3>Gotowe szablony zgłoszeń</h3>
-        <p>Ułatwiamy raportowanie problemów: sterowniki, wydajność, zgodność gier. Każda kategoria ma dedykowany szablon.</p>
+        <h3>Szablony zgłoszeń</h3>
+        <p>Proste raportowanie: instalacja, sterowniki, interfejs, pakiety i narzędzia.</p>
         <ul class="list">
-          <li>FPS / frametime</li>
-          <li>Urządzenia audio / wideo</li>
-          <li>Anticheat / kompatybilność online</li>
+          <li>Instalacja / boot</li>
+          <li>Środowisko / wygląd</li>
+          <li>Pakiety / aktualizacje</li>
+          <li>Narzędzia Vistula</li>
         </ul>
-        <div class="badge green">Open Source</div>
+        <div class="badge green">Issues welcome</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Najczęstsze pytania</h2>
+        <p class="lede">Krótko i konkretnie — reszta w dokumentacji.</p>
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <h3>Czy to jest czysty Arch?</h3>
+          <p>To Arch Linux jako baza + domyślna konfiguracja, motyw i wybrane narzędzia VistulaOS.</p>
+        </article>
+
+        <article class="card">
+          <h3>Czy dostanę aktualizacje z Archa?</h3>
+          <p>Tak — pacman i repozytoria Archa. Dodatkowe elementy VistulaOS możesz trzymać jako osobne paczki/repo.</p>
+        </article>
+
+        <article class="card">
+          <h3>Czy system jest “minimalny”?</h3>
+          <p>Tak. Celem jest sensowny start bez śmieci — a resztę dobierasz sam (Flatpak opcjonalnie).</p>
+        </article>
+
+        <article class="card">
+          <h3>Gdzie zgłosić błąd?</h3>
+          <p>Najlepiej w repozytorium (Issues). Dodaj logi i kroki odtworzenia — mamy szablony zgłoszeń.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -191,22 +307,25 @@
     <div class="footer-grid">
       <div>
         <div class="logo">VistulaOS</div>
-        <p>Debian dla graczy. Stabilny, szybki i wolny.</p>
+        <p>Nowoczesna dystrybucja oparta o Arch Linux. Spójna, lekka i przewidywalna.</p>
       </div>
+
       <div>
-        <h4>Linki</h4>
-        <a href="#features">Funkcje</a>
-        <a href="#performance">Wydajność</a>
+        <h4>Projekt</h4>
+        <a href="#about">O systemie</a>
+        <a href="#philosophy">Filozofia</a>
         <a href="#download">Pobierz</a>
       </div>
+
       <div>
         <h4>Wsparcie</h4>
-        <a href="#">Dokumentacja</a>
-        <a href="#">FAQ</a>
-        <a href="#">Kontakt</a>
+        <a href="#" data-action="docs">Dokumentacja</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" data-action="contact">Kontakt</a>
       </div>
     </div>
-    <p class="footer-note">© 2024 VistulaOS. Bazuje na Debianie. Przygotowane dla graczy.</p>
+
+    <p class="footer-note">© 2026 VistulaOS. Oparte o Arch Linux. Wszystkie znaki towarowe należą do ich właścicieli.</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
